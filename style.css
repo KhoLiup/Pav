@@ -1,0 +1,599 @@
+/* assets/css/style.css */
+
+/* Ümumi Stil Ayarları */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigasiya Paneli - Təkmilləşdirilmiş */
+nav {
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    padding: 12px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Təkmilləşdirmələri */
+.dropdown-menu {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 10px;
+    min-width: 220px;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(31, 28, 44, 0.1);
+    transform: translateX(5px);
+}
+
+.dropdown-item.active {
+    background-color: #1f1c2c;
+    color: white;
+}
+
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Başlıq və Məzmun - Təkmilləşdirilmiş */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #1f1c2c;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Card Stilləri - Yeni */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Form Stilləri - Təkmilləşdirilmiş */
+form {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1f1c2c;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"],
+form input[type="month"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #f8f9fc;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="month"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #928dab;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(146, 141, 171, 0.2);
+    background-color: #fff;
+}
+
+form button {
+    display: inline-block;
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+form button:hover {
+    background: linear-gradient(45deg, #2a2843, #a19dbd);
+    box-shadow: 0 5px 15px rgba(31, 28, 44, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Cədvəl Stilləri - Təkmilləşdirilmiş */
+table {
+    width: 100%;
+    margin: 0 auto 30px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table th {
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr {
+    transition: all 0.2s;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9fc;
+}
+
+table tr:hover {
+    background-color: #f1f1f8;
+}
+
+table a {
+    color: #1f1c2c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+table a:hover {
+    color: #928dab;
+}
+
+/* DataTables Təkmilləşdirmələri */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 20px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background-color: #f8f9fc;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 6px;
+    margin: 2px;
+    padding: 6px 12px;
+    border: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    color: white !important;
+    border: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #f1f1f8;
+    border: none;
+}
+
+/* Dashboard Kartlar - Yeni */
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card .icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 48px;
+    color: rgba(31, 28, 44, 0.1);
+    transition: all 0.3s;
+}
+
+.stat-card:hover .icon {
+    transform: scale(1.2) rotate(10deg);
+    color: rgba(31, 28, 44, 0.15);
+}
+
+.stat-card .title {
+    font-size: 14px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.stat-card .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f1c2c;
+    margin-bottom: 5px;
+}
+
+.stat-card .trend {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.stat-card .trend.up {
+    color: #28a745;
+}
+
+.stat-card .trend.down {
+    color: #dc3545;
+}
+
+/* Düymə Stilləri - Yeni */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #2a2843, #a19dbd);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(31, 28, 44, 0.3);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #28a745, #5fd778);
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(45deg, #218838, #5fd778);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #dc3545, #ff6b7d);
+    border: none;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(45deg, #c82333, #ff6b7d);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(220, 53, 69, 0.3);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn i {
+    margin-right: 6px;
+}
+
+/* Footer Stilləri - Təkmilləşdirilmiş */
+footer {
+    background: linear-gradient(45deg, #1f1c2c, #928dab);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Alert Mesajları - Təkmilləşdirilmiş */
+.alert {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+.alert.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left: 4px solid #ffc107;
+}
+
+.alert.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-left: 4px solid #17a2b8;
+}
+
+/* Chart Konteyner */
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+/* Responsive Media Sorğuları */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+    
+    .chart-container {
+        height: 300px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .chart-container {
+        height: 250px;
+    }
+    
+    .card-header {
+        padding: 12px 15px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+}
+
+/* Loader və Animasiyalar */
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(146, 141, 171, 0.3);
+    border-radius: 50%;
+    border-top-color: #1f1c2c;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #1f1c2c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1f1c2c transparent transparent transparent;
+}

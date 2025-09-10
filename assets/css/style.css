@@ -1,0 +1,456 @@
+/* assets/css/style.css */
+
+
+
+/* Ümumi Stil Ayarları */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: #f4f6f9;
+
+    color: #333;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* Navigasiya Paneli */
+
+nav {
+
+    background-color: #2c3e50;
+
+    padding: 10px 0;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+
+
+nav ul {
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+nav ul li {
+
+    margin: 0 15px;
+
+}
+
+
+
+nav ul li a {
+
+    color: #ecf0f1;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    padding: 8px 16px;
+
+    transition: background-color 0.3s, color 0.3s;
+
+    border-radius: 4px;
+
+}
+
+
+
+nav ul li a:hover,
+
+nav ul li a.active {
+
+    background-color: #34495e;
+
+    color: #fff;
+
+}
+
+
+
+/* Başlıq və Məzmun */
+
+h1, h2 {
+
+    text-align: center;
+
+    margin: 20px 0;
+
+    color: #2c3e50;
+
+}
+
+
+
+h1 {
+
+    font-size: 2.5em;
+
+    margin-top: 30px;
+
+}
+
+
+
+h2 {
+
+    font-size: 2em;
+
+    margin-top: 20px;
+
+}
+
+
+
+/* Form Stiləri */
+
+form {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+}
+
+
+
+form label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #2c3e50;
+
+}
+
+
+
+form input[type="text"],
+
+form input[type="password"],
+
+form input[type="number"],
+
+form input[type="date"],
+
+form input[type="month"],
+
+form select,
+
+form textarea {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #bdc3c7;
+
+    border-radius: 4px;
+
+    font-size: 16px;
+
+    transition: border-color 0.3s;
+
+}
+
+
+
+form input[type="text"]:focus,
+
+form input[type="password"]:focus,
+
+form input[type="number"]:focus,
+
+form input[type="date"]:focus,
+
+form input[type="month"]:focus,
+
+form select:focus,
+
+form textarea:focus {
+
+    border-color: #2980b9;
+
+    outline: none;
+
+}
+
+
+
+form button {
+
+    display: inline-block;
+
+    background-color: #2980b9;
+
+    color: #fff;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: background-color 0.3s;
+
+}
+
+
+
+form button:hover {
+
+    background-color: #3498db;
+
+}
+
+
+
+/* Cədvəl Stiləri */
+
+table {
+
+    width: 90%;
+
+    margin: 20px auto;
+
+    border-collapse: collapse;
+
+    background: #fff;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+
+table th,
+
+table td {
+
+    padding: 12px 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ecf0f1;
+
+}
+
+
+
+table th {
+
+    background-color: #2980b9;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    font-size: 14px;
+
+}
+
+
+
+table tr:nth-child(even) {
+
+    background-color: #f9f9f9;
+
+}
+
+
+
+table tr:hover {
+
+    background-color: #f1f1f1;
+
+}
+
+
+
+table a {
+
+    color: #2980b9;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+
+table a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* Footer Stiləri */
+
+footer {
+
+    background-color: #2c3e50;
+
+    color: #ecf0f1;
+
+    text-align: center;
+
+    padding: 15px 0;
+
+    position: fixed;
+
+    width: 100%;
+
+    bottom: 0;
+
+}
+
+
+
+/* Responsive Dizayn */
+
+@media (max-width: 768px) {
+
+    nav ul {
+
+        flex-direction: column;
+
+    }
+
+
+
+    nav ul li {
+
+        margin: 10px 0;
+
+    }
+
+
+
+    form {
+
+        padding: 20px;
+
+    }
+
+
+
+    table {
+
+        width: 100%;
+
+    }
+
+}
+
+
+
+/* Daxili Stil Ayarları */
+
+button {
+
+    border: none;
+
+    border-radius: 4px;
+
+}
+
+
+
+button:focus {
+
+    outline: none;
+
+}
+
+
+
+/* Alert Mesajları */
+
+.alert {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    padding: 15px;
+
+    border-radius: 4px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+
+
+.alert.success {
+
+    background-color: #2ecc71;
+
+    color: #fff;
+
+}
+
+
+
+.alert.error {
+
+    background-color: #e74c3c;
+
+    color: #fff;
+
+}
+
